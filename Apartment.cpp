@@ -27,65 +27,74 @@ void Room ::SetRoomColor(string c) {
 }
 string Room ::GetRoomColor() const {
     return color ;
+} 
+void Apartment ::setKitchencolor(Room room) {
+    Kitchen.SetRoomColor(room.color) ;
 }
-void Kitchen ::SetFridgeColor(string color) {
+void Apartment ::setKitchenheight(Room room) {
+    Kitchen.SetRoomHeight(room.height) ;
+}
+void Apartment ::setKitchenwidth(Room room) {
+    Kitchen.SetRoomWidth(room.width) ;
+}
+void Apartment ::SetFridgeColor(string color) {
     FridgeColor = color ;
 }
-string Kitchen ::GetFridgeColor() const {
+string Apartment ::GetFridgeColor() const {
     return FridgeColor ;
 }
-void Kitchen ::SetNumberOfFlames(int num) {
+void Apartment ::SetNumberOfFlames(int num) {
     FlamesNumber = num ;
 }
-int Kitchen ::GetNumberOfFlames() const {
+int Apartment ::GetNumberOfFlames() const {
     return FlamesNumber ;
 }
-void Kitchen ::SetStoveColor(string color) {
+void Apartment ::SetStoveColor(string color) {
     stovecolor = color ;
 }
-string Kitchen ::GetStoveColor() const {
+string Apartment ::GetStoveColor() const {
     return stovecolor ;
 }
-void LivingRoom ::SetTvSize(int Inches) {
+void Apartment ::SetTvSize(int Inches) {
     TVInches = Inches ;
 }
-int LivingRoom ::GetTvSize() const {
+int Apartment ::GetTvSize() const {
     return TVInches ;
 }
-void Salon ::SetNumberOfSalonObjects(int n) {
+void Apartment ::SetNumberOfSalonObjects(int n) {
     NumberOfSalonObjects = n ;
 }
-int Salon ::GetNumberOfSalonObjects() const {
+int Apartment ::GetNumberOfSalonObjects() const {
     return NumberOfSalonObjects ;
 }
-void Salon ::SetSalonColor(string color) {
+void Apartment ::SetSalonColor(string color) {
     salonColor = color ;
 }
-string Salon ::GetSalonColor() const {
+string Apartment ::GetSalonColor() const {
     return salonColor ;
 }
-void Sofa ::SetNumberOfSofaObjects(int n) {
+void Apartment ::SetNumberOfSofaObjects(int n) {
     NumberOfSofaObjects = n ;
 }
-int Sofa ::GetNumberOfSofaObjects() const {
+int Apartment ::GetNumberOfSofaObjects() const {
     return NumberOfSofaObjects ;
 }
-void Sofa ::SetSofaColor(string color) {
+void Apartment ::SetSofaColor(string color) {
     sofaColor = color ;
 }
-string Sofa ::GetSofaColor() const {
+string Apartment ::GetSofaColor() const {
     return sofaColor ;
 }
-void Bedroom ::SetBedColor(string color) {
+void Apartment ::SetBedColor(string color) {
     BedColor = color ;
 }
-string Bedroom ::GetBedColor() const {
+string Apartment ::GetBedColor() const {
     return BedColor ;
 }
-void Bedroom ::SetShovenirahColor (string color) {
+void Apartment ::SetShovenirahColor (string color) {
     ShovenirahColor = color ;
 }
-string Bedroom ::GetShovenirahColor() const {
+string Apartment ::GetShovenirahColor() const {
     return ShovenirahColor ;
 }
 void Apartment ::SetApartmentFloor(int num) {
