@@ -3,11 +3,10 @@ using namespace std ;
 #ifndef BUILDING_APARTMENT_H
 #define BUILDING_APARTMENT_H
 class Room{
-private:
+public:
     double height ;
     double width ;
     string color ;
-public:
     Room();
     Room(double h , double w , string c) ;
     void SetRoomHeight(double h) ;
@@ -18,72 +17,59 @@ public:
     double GetRoomArea() const ;
     string GetRoomColor() const ;
 };
-class Kitchen : public Room{
-private:
-    string FridgeColor ;
-    string stovecolor ;
-    int FlamesNumber ;
-public:
-    void SetFridgeColor(string color) ;
-    string GetFridgeColor() const ;
-    void SetStoveColor(string color) ;
-    string GetStoveColor() const ;
-    void SetNumberOfFlames(int num) ;
-    int GetNumberOfFlames() const ;
-};
-class LivingRoom : public Room{
-private:
-    int TVInches ;
-public:
-    void SetTvSize (int Inches) ;
-    int GetTvSize() const ;
-};
-class Salon : public Room{
-private:
-    int NumberOfSalonObjects ;
-    string salonColor ;
-public:
-    void SetNumberOfSalonObjects(int n) ;
-    int GetNumberOfSalonObjects() const ;
-    void SetSalonColor (string color) ;
-    string GetSalonColor() const;
-};
-class Sofa : public Room{
-private:
-    int NumberOfSofaObjects ;
-    string sofaColor ;
-public:
-    void SetNumberOfSofaObjects(int n) ;
-    int GetNumberOfSofaObjects() const ;
-    void SetSofaColor (string color) ;
-    string GetSofaColor() const;
-};
-class Bedroom : Room{
-private:
-   Room Clothingroom ;
-    string BedColor ;
-    string ShovenirahColor ;
-public:
-    void SetBedColor(string color) ;
-    string GetBedColor() const ;
-    void SetShovenirahColor(string color) ;
-    string GetShovenirahColor() const ;
-};
-class Bathroom : Room{
-
-};
-class Apartment : public Bedroom , public Kitchen , public LivingRoom , public Salon , public Sofa , public Bathroom{
+class Apartment {
 private:
     int NumberOfRooms ;
     int ApartmentNumber ;
     int ApartmentFloor ;
+    Room Kitchen ;
+    Room Bathroom ;
+    Room Salon ;
+    Room Sofa ;
+    Room Livingroom ;
+    Room Clothingroom ;
+    Room Bedroom ;
+    string FridgeColor ;
+    string stovecolor ;
+    int FlamesNumber ;
+    int TVInches ;
+    int NumberOfSalonObjects ;
+    string salonColor ;
+    int NumberOfSofaObjects ;
+    string sofaColor ;
+    string BedColor ;
+    string ShovenirahColor ;
 public:
+    void setKitchencolor(Room room) ;
+    string GetKitchencolor() const ;
+    void setKitchenwidth(Room room) ;
+    void setKitchenheight(Room room) ;
     void SetNumberOfRooms(int num) ;
     int GetNumberOfRooms() const ;
     void SetApartmentNumber(int num) ;
     int GetApartmentNumber() const ;
     void SetApartmentFloor(int num) ;
     int GetApartmentFloor() const ;
+    void SetFridgeColor(string color) ;
+    string GetFridgeColor() const ;
+    void SetStoveColor(string color) ;
+    string GetStoveColor() const ;
+    void SetNumberOfFlames(int num) ;
+    int GetNumberOfFlames() const ;
+    void SetTvSize (int Inches) ;
+    int GetTvSize() const ;
+    void SetNumberOfSalonObjects(int n) ;
+    int GetNumberOfSalonObjects() const ;
+    void SetSalonColor (string color) ;
+    string GetSalonColor() const;
+    void SetNumberOfSofaObjects(int n) ;
+    int GetNumberOfSofaObjects() const ;
+    void SetSofaColor (string color) ;
+    string GetSofaColor() const;
+    void SetBedColor(string color) ;
+    string GetBedColor() const ;
+    void SetShovenirahColor(string color) ;
+    string GetShovenirahColor() const ;
 };
 
 
